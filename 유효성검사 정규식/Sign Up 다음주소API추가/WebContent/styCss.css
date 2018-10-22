@@ -1,0 +1,25 @@
+@charset "EUC-KR";
+.btnhover {
+	color: #116688;
+}
+
+.btnhover:hover {
+	color: #000000;
+}
+
+.qwer th {
+	padding: 10px;
+	color: #116688;
+	border-bottom: 3px solid #116688;
+	text-align: left;
+}
+
+.qwer td {
+	color: #666699;
+	padding: 10px;
+	border-bottom: 1px solid #DDDDDD;
+}
+
+.qwer tr:hover td {
+	color: #000000;
+}
