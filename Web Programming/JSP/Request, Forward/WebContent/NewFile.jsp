@@ -13,11 +13,13 @@
 	<table border=0>
 		<tr>
 			<td>
+			<!-- index에서 넘어온 값을 request으로 받아옴 -->
 				<%
 					String user = request.getParameter("na");
 					String job = request.getParameter("items1");
-					String[] inter = request.getParameterValues("inter");
-				%> 이름 :<%=user%><br> 직업 :<%=job%><br> 관심분야 :
+					String[] inter = request.getParameterValues("inter"); 
+				%> 
+				이름 :<%=user%><br> 직업 :<%=job%><br> 관심분야 :
 				<%for (int i = 0; i < inter.length; i++) {%>
 				<%=inter[i]%>
 				<%}%>

@@ -12,6 +12,7 @@
 <body>
 	<h2>request 테스트 폼</h2>
 	<hr>
+	<!-- form을 이용하여 NewFile.jsp으로 값 전송-->
 	<form name="form1" action="NewFile.jsp" method="post">
 		<table>
 			<tr>
