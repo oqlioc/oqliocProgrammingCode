@@ -31,7 +31,6 @@ public class LoginServiceImpl implements LoginService {
 
 	@Override
 	public List<MemberDTO> list(MemberDTO dto) {
-		
 		return loginDao.memberlist(dto);
 	}
 
