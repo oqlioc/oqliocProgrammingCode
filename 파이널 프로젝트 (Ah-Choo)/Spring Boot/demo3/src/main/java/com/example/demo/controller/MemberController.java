@@ -1,7 +1,9 @@
 package com.example.demo.controller;
 
-import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
+import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -63,7 +65,6 @@ public class MemberController {
 	}
 
 	// 카메라 피부 결과값 넣기
-	//===================================================추가
 	@RequestMapping(value = "/memberDetailT", produces = "application/json; charset=UTF-8")
 	@ResponseBody
 	public int memberDetailT(@RequestBody MemberDTO member) {
@@ -77,7 +78,25 @@ public class MemberController {
 
 		return memberService.setSelfTestResult(request);
 	}
+
+	// 사용자 톤 알기
+//	@RequestMapping(value = "/getSelfTestResult", produces = "application/json; charset=UTF-8")
+//	public String getSelfTestResult(HttpServletRequest request) {
+//		System.out.println(memberService.getSelfTestResult(request));
+//		
+//		return "{\"selfT\":\""+memberService.getSelfTestResult(request)+"\"}";
+//		
+//	}
 	
+	@RequestMapping(value="/getSelfTestResult")
+	public Map<String,String> getSelfTestResult(HttpServletRequest request){
+		
+		
+		return memberService.getSelfTestResult(request);
+		
+	}
+	
+
 	@RequestMapping(value = "/info_detailtest", produces = "application/json; charset=UTF-8")
 	@ResponseBody
 	public int info_detailtest(@RequestBody MemberDTO member) {
@@ -85,7 +104,7 @@ public class MemberController {
 		System.out.println(RGB + "     111111111111111111111111");
 		return RGB;
 	}
-	
+
 	// 자가진단 결과 보기
 
 	// 자가진단 수정
@@ -96,11 +115,11 @@ public class MemberController {
 	// 상세진단 수정
 
 	// for Web
-//	@RequestMapping("/user")
-//	public List<Member> findByUsername() {
+//   @RequestMapping("/user")
+//   public List<Member> findByUsername() {
 //
-//		return memberRepository.findAll();
+//      return memberRepository.findAll();
 //
-//	}
+//   }
 
 }

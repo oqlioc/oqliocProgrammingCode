@@ -1,15 +1,11 @@
 package com.example.demo.domain;
 
-import javax.persistence.CascadeType;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Table(name = "Member")
@@ -36,7 +32,7 @@ public class MemberDTO {
 
 	private int priceRange;
 
-	private int colorRange;
+	private String colorRange;
 
 	public MemberDTO() {
 
@@ -52,7 +48,7 @@ public class MemberDTO {
 	}
 
 	public MemberDTO(String id, String pw, String nick, String email, String selfT, String detailT, int priceRange,
-			int colorRange) {
+			String colorRange) {
 		super();
 		this.id = id;
 		this.pw = pw;
@@ -120,11 +116,11 @@ public class MemberDTO {
 		this.priceRange = priceRange;
 	}
 
-	public int getColorRange() {
+	public String getColorRange() {
 		return colorRange;
 	}
 
-	public void setColorRange(int colorRange) {
+	public void setColorRange(String colorRange) {
 		this.colorRange = colorRange;
 	}
 

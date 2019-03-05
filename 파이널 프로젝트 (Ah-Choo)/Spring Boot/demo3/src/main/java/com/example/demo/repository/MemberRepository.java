@@ -15,10 +15,13 @@ public interface MemberRepository extends JpaRepository<MemberDTO, String> {
 
 	public static final String FIND_SELFT_BY_ID = "Select SelfT From Member Where Nick= :id";
 	public static final String FIND_FIRST_LOGIN = "Select Id From Member Where SelfT IS NULL And Id= :id";
-	public static final String UPDATE_SELFT = "Update Member Set SelfT= :selfT Where nick= :nick";
-	public static final String UPDATE_DETAILT = "Update Member Set DetailT= :detailT Where Id= :id";
 	public static final String FIND_INFO_DETAILTEST = "Select DetailT From Member Where Id= :id";
-
+	public static final String FIND_PRICE_BY_ID="Select price_range From Member Where Nick = :id";
+	
+	public static final String UPDATE_SELFT = "Update Member Set SelfT= :selfT, price_Range= :money, color_Range = :lipColor Where nick= :nick";
+	public static final String UPDATE_DETAILT = "Update Member Set DetailT= :detailT Where Id= :id";
+	
+	
 	MemberDTO findByIdAndPw(String id, String pw);
 
 	Optional<MemberDTO> findById(String id);
@@ -34,8 +37,12 @@ public interface MemberRepository extends JpaRepository<MemberDTO, String> {
 	@Transactional
 	@Modifying
 	@Query(value = UPDATE_SELFT, nativeQuery = true)
-	public void updateSelfT(@Param("selfT") String selfT, @Param("nick") String nick);
+	public void updateSelfT(@Param("selfT") String selfT, @Param("nick") String nick, @Param("money") int money, @Param("lipColor")String lipColor);
 
+	// 선호 가격대 검색
+	@Query(value=FIND_PRICE_BY_ID, nativeQuery=true)
+	public int findPriceById(@Param("id") String id);
+	
 	// 카메라 피부 결과값 넣기
 	// ===================================================추가
 	@Transactional
@@ -47,4 +54,5 @@ public interface MemberRepository extends JpaRepository<MemberDTO, String> {
 	// ===================================================
 	@Query(value = FIND_INFO_DETAILTEST, nativeQuery = true)
 	String info_detailtest(String id);
+
 }

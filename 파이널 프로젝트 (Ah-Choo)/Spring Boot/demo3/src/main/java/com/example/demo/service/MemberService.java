@@ -1,13 +1,16 @@
 package com.example.demo.service;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
-
 import com.example.demo.domain.MemberDTO;
 import com.example.demo.repository.MemberRepository;
 
@@ -120,8 +123,36 @@ public class MemberService {
 
 	}
 
+	public Map<String, String> getSelfTestResult(HttpServletRequest request) {
+		String nick = request.getParameter("id");
+		String result_1, result_2 = "";
+
+		Map<String, String> result = new HashMap<>();
+
+		result_1 = memberRepository.findSelfTById(nick);
+		switch (result_1) {
+		case "aw":
+			result_2 = "가을 웜톤";
+			break;
+		case "sw":
+			result_2 = "봄 웜톤";
+			break;
+		case "sc":
+			result_2 = "여름 쿨톤";
+			break;
+		case "wc":
+			result_2 = "겨울 쿨톤";
+			break;
+		default:
+			result_2 = "펄스널 컬러를 진단해주세요.";
+
+		}
+		result.put("selfTestResult", result_2);
+		return result;
+
+	}
+
 	// 카메라 피부 결과값 넣기
-	// ===================================================추가
 	public int memberDetailT(@RequestBody MemberDTO member) {
 
 		memberRepository.memberDetailT(member.getId(), String.valueOf(member.getDetailT()));
@@ -131,18 +162,22 @@ public class MemberService {
 
 	// 자가진단 결과값 넣기
 	public int setSelfTestResult(HttpServletRequest request) {
+
 		String nick = request.getParameter("nick");
 		String selfT = request.getParameter("selfT");
 
-		System.out.println(nick + "  " + selfT);
-		memberRepository.updateSelfT(selfT, nick);
+		int money = Integer.parseInt(request.getParameter("money"));
+
+		String lipColor = request.getParameter("lipColor");
+
+		System.out.println(" 닉네임 : " + nick + " 펄스널컬러 : " + selfT + " 선호하는 가격대 : " + money + " 선호하는 색상 :" + lipColor);
+		memberRepository.updateSelfT(selfT, nick, money, lipColor);
 
 		return 1;
 
 	}
 
 	// 카메라 피부 결과값 들고오기
-	// ===================================================
 	public int info_detailtest(@RequestBody MemberDTO member) {
 
 		int info_detailtest = Integer.parseInt(memberRepository.info_detailtest(member.getId())); // 사용자의 톤
