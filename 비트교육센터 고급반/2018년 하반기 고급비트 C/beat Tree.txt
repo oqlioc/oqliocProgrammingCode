@@ -1,0 +1,98 @@
+#define _CRT_SECURE_NO_WARNINGS//#pragma warning(disable:4996)
+#include <stdio.h>
+#include <stdlib.h>
+typedef struct node {
+    int key;
+    int data;
+    struct node* left;
+    struct node* right;
+}Node;
+int Insert(Node* root, int key, int data);
+int Delete(Node* root, int key);
+int Getdata(Node* root, int key, int* data);
+void Disp(Node* root);
+void PreOrder(Node* cur);
+void InOrder(Node* cur);
+void PostOrder(Node* cur);
+ 
+int main()
+{
+    Node* root = (Node *)calloc(1, sizeof(Node));
+    root->left = NULL;
+    root->right = NULL;
+    root->key = -1;
+    root->data = -1;
+    int m_num;
+    int key;
+    int data;
+ 
+    while (1)
+    {
+        puts("");
+        puts("**Menu**");
+        puts("1. Insert");
+        puts("2. Getdata");
+        puts("3. Delete");
+        puts("4. Disp");
+        puts(":");
+        scanf("%d", &m_num);
+ 
+        switch (m_num)
+        {
+        case 1:
+            //insert
+            puts("Enter the key : ");    //key 입력
+            scanf("%d", &key);
+            puts("Enter the data : ");    //data 입력
+            scanf("%d", &data);
+ 
+            if (Insert(root, key, data) == -1)
+            {
+                puts("ERR");
+                break;
+            }
+            puts("Done");
+            break;
+        case 2:
+            //getdata
+            puts("Enter the key :");
+            scanf("%d", &key);
+            if (Getdata(root, key, &data) == -1)
+            {
+                puts("ERR");
+                break;
+            }
+            printf("Data : %d\n", data);
+            break;
+        case 3:
+            //delete
+            puts("Enter the key :");
+            scanf("%d", &key);
+            if (Delete(root, key) == -1)
+            {
+                puts("ERR");
+                break;
+            }
+            puts("Delete Done");
+            break;
+        case 4:
+            //disp
+            puts("<Result>");
+            Disp(root->left);
+            break;
+        default:
+            puts("Wrong Input!");
+            break;
+        }
+    }
+
+
+
+}
+
+
+                root
+
+      key(0), data        key(1),data      
+
+ key(2), data    

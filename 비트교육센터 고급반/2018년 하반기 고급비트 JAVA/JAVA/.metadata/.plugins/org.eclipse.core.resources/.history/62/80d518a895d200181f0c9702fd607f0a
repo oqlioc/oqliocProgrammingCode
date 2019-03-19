@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>계산기</title>
+<script language="javascript">
+
+function numInput(i) {
+	var objText = document.getElementById("tbString");
+	var objNumBtn = document.getElementById("numBtn");
+	var objPlusBtn = document.getElementById("plusBtn");
+
+	objText.value = objText.value + i;
+
+}
+
+function operPlus() {
+	var objText = document.getElementById("tbString");
+	var objNumBtn = document.getElementById("numBtn");
+	var objOperBtn = document.getElementById("operBtn");
+
+	objText.value = eval(objText.value);
+	
+}
+/*
+function valueOut() {
+	var objText = document.getElementById("tbString");
+	
+	objText.value = numInput.numTemp + operPlus.plusTemp;
+}
+*/
+</script>
+</head>
+<body>
+<form action="calculadora">
+   <table style="text-align: center;">
+      <tr>
+         <td>
+            <input type="text" size="60" id="tbString">
+         </td>
+      </tr>
+      
+      <tr>
+         <td>
+            <input type="reset" name="clear_reset" id="resetBtn" value="Clear" style="width: 100px; height: 30px; color: blue;">
+            <input type="button" name="equls_sub" id="equalBtn" value="=" style="width: 100px; height: 30px; color: blue;" onclick="operPlus()">
+         </td>
+      </tr>
+      
+      <tr>
+         <td>
+         	<input type="button" id="numBtn" value="1" style="width: 40px; height: 30px; color: blue;" onclick="numInput(this.value)">
+         	<input type="button" name="num_sub" id="numBtn" value="2" style="width: 40px; height: 30px; color: blue;" onclick="numInput(this.value)">
+         	<input type="button" name="num_sub" id="numBtn" value="3" style="width: 40px; height: 30px; color: blue;" onclick="numInput(this.value)">
+         	<input type="button" name="num_sub" id="plusBtn" value="+" style="width: 40px; height: 30px; margin-left: 25px; color: green;" onclick="numInput(this.value)">
+         	<input type="button" name="num_sub" id="operBtn" value="x^y" style="width: 40px; height: 30px; margin-left: 25px; color: red;" onclick="operInput()">
+         </td>
+      </tr>
+      
+      <tr>
+         <td>
+         	<input type="button" name="num_sub" id="numBtn" value="4" style="width: 40px; height: 30px; color: blue;" onclick="numInput(4)">
+         	<input type="button" name="num_sub" id="numBtn" value="5" style="width: 40px; height: 30px; color: blue;" onclick="numInput(5)">
+         	<input type="button" name="num_sub" id="numBtn" value="6" style="width: 40px; height: 30px; color: blue;" onclick="numInput(6)">
+         	<input type="button" name="num_sub" id="operBtn" value="-" style="width: 40px; height: 30px; margin-left: 25px; color: green;" onclick="operInput()">
+         	<input type="button" name="num_sub" id="operBtn" value="sin" style="width: 40px; height: 30px; margin-left: 25px; color: red;" onclick="operInput()">
+         </td>
+      </tr>
+      
+      <tr>
+         <td>
+         	<input type="button" name="num_sub" id="numBtn" value="7" style="width: 40px; height: 30px; color: blue;" onclick="numInput(7)">
+         	<input type="button" name="num_sub" id="numBtn" value="8" style="width: 40px; height: 30px; color: blue;" onclick="numInput(8)">
+         	<input type="button" name="num_sub" id="numBtn" value="9" style="width: 40px; height: 30px; color: blue;" onclick="numInput(9)">
+         	<input type="button" name="num_sub" id="operBtn" value="*" style="width: 40px; height: 30px; margin-left: 25px; color: green;" onclick="operInput()">
+         	<input type="button" name="num_sub" id="operBtn" value="cos" style="width: 40px; height: 30px; margin-left: 25px; color: red;" onclick="operInput()">
+         </td>
+      </tr>
+      
+      <tr>
+         <td>
+         	<input type="button" name="num_sub" id="numBtn" value="0" style="width: 40px; height: 30px; color: blue;" onclick="numInput(0)">
+         	<input type="button" name="num_sub" id="numBtn" value="+/-" style="width: 40px; height: 30px; color: blue;" onclick="numInput(+/-)">
+         	<input type="button" name="num_sub" id="numBtn" value="." style="width: 40px; height: 30px; color: blue;" onclick="numInput(.)">
+         	<input type="button" name="num_sub" id="operBtn" value="/" style="width: 40px; height: 30px; margin-left: 25px; color: green;" onclick="operInput()">
+         	<input type="button" name="num_sub" id="operBtn" value="tan" style="width: 40px; height: 30px; margin-left: 25px; color: red;" onclick="operInput()">
+         </td>
+      </tr>
+      
+   </table>
+   </form>
+</body>
+</html>

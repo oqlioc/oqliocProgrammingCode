@@ -1,0 +1,12 @@
+c:\users\user\documents\visual studio 2012\Projects\Struct Person\Struct Person\bin\Debug\Struct Person.exe.config
+c:\users\user\documents\visual studio 2012\Projects\Struct Person\Struct Person\bin\Debug\Struct Person.exe
+c:\users\user\documents\visual studio 2012\Projects\Struct Person\Struct Person\bin\Debug\Struct Person.pdb
+c:\users\user\documents\visual studio 2012\Projects\Struct Person\Struct Person\obj\Debug\Struct Person.csprojResolveAssemblyReference.cache
+c:\users\user\documents\visual studio 2012\Projects\Struct Person\Struct Person\obj\Debug\Struct Person.exe
+c:\users\user\documents\visual studio 2012\Projects\Struct Person\Struct Person\obj\Debug\Struct Person.pdb
+F:\20131902\Struct Person\Struct Person\bin\Debug\Struct Person.exe.config
+F:\20131902\Struct Person\Struct Person\obj\Debug\Struct Person.exe
+F:\20131902\Struct Person\Struct Person\obj\Debug\Struct Person.pdb
+F:\20131902\Struct Person\Struct Person\obj\Debug\Struct Person.csprojResolveAssemblyReference.cache
+F:\20131902\Struct Person\Struct Person\bin\Debug\Struct Person.exe
+F:\20131902\Struct Person\Struct Person\bin\Debug\Struct Person.pdb

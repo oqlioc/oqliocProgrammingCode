@@ -1,0 +1,178 @@
+어셈블러 - 포트란,베이직 - 
+
+C언어
+
+C++   'oop'    -> (win32API) MFC -> C# (C#, window team 통합)   cms - app
+1. 절차지향  x                      └ window7 (망함)    	    - web (.net)
+2. 객체기반  x						            - mobile
+3. 객체지향  o     -    유지보수와 확장이 쉽다
+4. 일반화    o
+
+		C, C++ (버려진인원)-> JAVA(임베디드)                - web
+						                    - mobile
+ 
+
+
+변수 = 상수를 저장하는 메모리 공간 , 상수 = 값이 변하지않는 데이터
+
+BigData) 파이썬, R, 하드론
+아이폰 - Objcet C (call by reference)
+-------
+C++ (object orientation program)
+type - bool 0 or 1, / JAVA - true or false
+1. 추상화 - 
+2. 캡슐화 - 데이터를 보호(안정화)  default 값 : private
+3. 상속화 - 다중 상속, 단일 상속 가능  / 자바 - 단일 상속
+4. 다형성 - 하나를 여려가지 또는 여러가지를 하나 / 자바 - 오버라이딩 (하나의 이름으로 여러개의 함수를 사용 할수 있게 하는것), 동적바인딩
+모듈화 -
+
+call by value
+call by address
+call by reference (JAVA Pointer 개념)
+
+오버로딩  -  같은기능을 하되 데이터 내용이 다르게
+
+접근 지정자
+	1. private : 외부에서 접근 불가능
+				 단, friend는 접근 가능
+	2. default(자바)
+	3. protected : 상속받은 외부에서만 접근 가능
+	4. public : 아무나 접근 가능
+
+
+	클래스의 구성요소
+	1. 멤버변수, 필드 : 주로 private
+		
+	2. 생성자 함수 (디폴트) : public
+		1) 기능 : 객체등록, 필드초기화
+		2) 오버로딩이 가능(명시 암시 둘다 가능)
+			명시적 오버라이딩 = JAVA
+			암시적 오버라이딩 = (디폴트 인자값을 준 갯수 +1)함수는 똑같고 데이터가 다를 때 사용   void disp(int a = '0', int b = '0', int c = '0');
+		3) const memner function(메소드) 로 만들 수 없다.  / const 값 고정 / 파이널 메소드 오버라이딩 금지
+			- 멤버 변수('필드'를 보호하기 위해)의 값을 함수 내에서 바꿀 수 없게 하기 위해 사용
+			- const를 지역변수로 쓸 경우는 값이 변경가능(함수 내에 힙 영역에서 사용 후 삭제 되기때문에)
+			const int MAX = 3; 
+			 void disp(int a = 0, int b = 0, int c = 0)const
+		4) 디폴트 생성자를 명시적으로 구현할 경우
+		   디폴트 생성자는 사라진다.
+		5) 객체 생성시 자동호출되어진다
+
+	3. 멤버함수, 메소드 : public   // 외부함수와 내부함수를 이어주게함
+		: 외부에서 필드를 사용하게 하기 위한 기능
+		: this * 는 인스턴스 메소드에 
+
+	4. 복사생성자 (디폴트)
+		복사생성자 호출시기
+			1. 객체 생성시 객체를 인자로 줄 경우
+			2. 객체 생성시 객체를 대입 할 경우
+			3. 메소드의 매개변수로 객체를 선언 할 경우
+			4. 메소드에서 객체를 리턴 할 경우
+
+			필드를 포인터로 안쓸시 디폴트값으로 매개변수 그대로 복사
+			포인터 쓰면 복사 x
+
+			A aa;   'A bb(aa)';    / 'A cc = aa'; (  aa ->대입 cc )
+
+			A disp('A aa') {
+				A aa;
+				return 'aa';
+				}
+		
+		복사 생성자 : field copy 
+			- 얕은 복사 ( 프로그램이 알아서 해줌. 필드를 포인터 사용안할때 해당 )
+			- 깊은 복사(deep copy) ( 필드 포인터 사용시(필드 포인터 카피 시 주소값만 복사 / 개발자 몫 )
+				
+	5. 소멸자 (디폴트)
+		: 객체 소멸시 자동호출되어진다.
+		: 객체 등록 해제
+		: 객체 소멸시 객체 잔여 메모리 정리
+		: 생성자와 동일하지만 함수명앞에 ~(틸드)가 붙는다.
+		: 오버로딩이 불가능하다.
+		: const member function로 만들 수 없다.
+		: virtual 함수로 꼭 만들어서 사용해라. (동적바인딩을 위해서)
+
+	6. 대입연산자함수 (디폴트)
+
+	2,4,5,6번은 default로 존재하기 때문에 항상 존재함
+
+
+
+
+short int long
+float double bool
+char (1byte)     -> JAVA(UNICODE -> char : 2byte)
+
+
+class A {
+
+}; // 외부함수
+
+field -> member function(멤버 변수)
+
+
+자바 class {
+default 시 상속자만 존재
+}
+
+C++ class {
+default 시 4개가 존재
+}
+
+신표지               
+#include <iostream>
+using namespace std; // 출력함수할때 std앞에 안써도됨                                      
+templit  / JAVA - 제너릭            
+
+출력
+cout << a;
+cout << a << b;
+output stream operator     
+
+입력
+cin >> a;
+cin >> a >> b;
+input stream operator     
+
+
+
+C++
+
+클래스 포인터
+class *
+A *p = new A(int);
+
+
+void A::disp() 
+{
+} // 메소드
+
+
+
+---
+int n1, n2
+char op
+float res
+
+
+input(&n1, &n2, &op)
+ex(n1, n2, op, res)
+disp(n1, n2, op, res)
+
+--- 
+
+HOMEWORK (C++ 09.12)    4  /  4         CLEAR
+
+1. using namespace std;                                CLEAR
+이름 공간을 어떻게 쓰고, 어떤건지 정리해서
+예제만들어서 올리기
+
+
+2. cpp , h 파일로 빼서                                 CLEAR
+외부 선언 함수를 싹다 헤더파일로
+함수 선언 4개면 헤더파일 4개
+
+3. 클래스로 만드는데                                   CLEAR
+1개는
+메인(외부)에서만 동적(포인트)으로 만들고
+
+4. 또 다른 한개는 전 필드 동적(포인트)으로 만들기      CLEAR

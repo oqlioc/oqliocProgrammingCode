@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>하이퍼링크</title>
+<script language="javascript">
+var One = "0";
+var Two = "0";
+var Operator = "";
+var OperTemp;
+
+function InputNum(num) {
+   var objText = document.getElementById("mainText");
+
+      objText.value = objText.value + num;
+}
+function InOperator(oper) {
+   var objText = document.getElementById("mainText");
+   Operator = document.getElementById("operBtn");
+   OperTemp = oper;
+
+    One = objText.value;
+      objText.value = "";
+   
+}
+function NumValue() {
+   var objText = document.getElementById("mainText");
+   Two = objText.value;
+   
+   switch (OperTemp) {
+   case '+':
+      objText.value = parseInt(One) + parseInt(Two);
+      break;
+   case '-':
+      objText.value = parseInt(One) - parseInt(Two);
+      break;
+   case '*':
+      objText.value = parseInt(One) * parseInt(Two);
+      break;
+   case '/':
+      objText.value = parseInt(One) / parseInt(Two);
+      break;
+   case 'x^y':
+      objText.value = Math.pow(parseInt(One), parseInt(Two));
+      break;
+   case 'sin':
+      objText.value = Math.sin(parseInt(One));
+      break;
+   case 'cos':
+      objText.value = Math.cos(parseInt(One));
+      break;
+   case 'tan':
+      objText.value = Math.tan(parseInt(One));
+      break;
+   default:
+      break;
+   }
+   /*
+   if (optotal1.value == "+") {
+      objText.value = parseInt(x) + parseInt(y);
+   }else if (optotal1.value == "-") {
+      objText.value = parseInt(x) - parseInt(y);
+   }else if (optotal1.value == "*") {
+      objText.value = parseInt(x) * parseInt(y);
+   }else if (optotal1.value == "/") {
+      objText.value = parseInt(x) / parseInt(y);
+   }
+   */
+}
+
+
+</script>
+</head>
+<body>
+<form action="calculadora">
+   <table  width="50%" hight="100" style="text-align: center;" >
+      <tr>
+         <td><input type="text" id="mainText" size="50" value=""></td>
+      </tr>
+      <tr>
+         <td>
+            <input type="reset" id="reset" value="Clear"  style="width: 80px; height: 40px;">
+            <input onclick="NumValue()" type="button" id="submit" value="=" style="width: 80px;height: 40px;">
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <input onclick="InputNum(1)" id="numBtn" type="button" value="1" style="width: 50px; height: 40px;">
+            <input onclick="InputNum(2)" id="numBtn" type="button" value="2" style="width: 50px; height: 40px;">
+            <input onclick="InputNum(3)" id="numBtn" type="button" value="3" style="width: 50px; height: 40px;">
+            <input onclick="InOperator(this.value)" id="operBtn" type="button" value="+" style="width: 50px; height: 40px; margin-left: 15px; margin-right: 15px;">
+            <input onclick="InOperator(this.value)" id="operBtn"type="button" value="x^y" style="width: 50px; height: 40px;">
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <input onclick="InputNum(4)" id="numBtn" type="button" value="4" style="width: 50px; height: 40px;">
+            <input onclick="InputNum(5)" id="numBtn" type="button" value="5" style="width: 50px; height: 40px;">
+            <input onclick="InputNum(6)" id="numBtn" type="button" value="6" style="width: 50px; height: 40px;">
+            <input onclick="InOperator(this.value)" id="operBtn" type="button" value="-" style="width: 50px; height: 40px; margin-left: 15px; margin-right: 15px;">
+            <input onclick="InOperator(this.value)" id="operBtn" type="button" value="sin" style="width: 50px; height: 40px;">
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <input onclick="InputNum(7)" id="numBtn" type="button" value="7" style="width: 50px; height: 40px;">
+            <input onclick="InputNum(8)" id="numBtn" type="button" value="8" style="width: 50px; height: 40px;">
+            <input onclick="InputNum(9)" id="numBtn" type="button" value="9" style="width: 50px; height: 40px;">
+            <input onclick="InOperator(this.value)" id="operBtn" type="button" value="*" style="width: 50px; height: 40px; margin-left: 15px; margin-right: 15px;">
+            <input onclick="InOperator(this.value)" id="operBtn" type="button" value="cos" style="width: 50px; height: 40px;">
+         </td>
+      </tr><tr>
+         <td>
+            <input onclick="InputNum(0)" id="numbtn" type="button" value="0" style="width: 50px; height: 40px;">
+            <input onclick="InputNum(this.value)" id="numbtn" type="button" value="+/-" style="width: 50px; height: 40px;">
+            <input onclick="InputNum('.')" id="numbtn" type="button" value="." style="width: 50px; height: 40px;">
+            <input onclick="InOperator(this.value)" id="operBtn" type="button" value="/" style="width: 50px; height: 40px; margin-left: 15px; margin-right: 15px;">
+            <input onclick="InOperator(this.value)" id="operBtn" type="button" value="tan" style="width: 50px; height: 40px;">
+         </td>
+      </tr>
+   </table>
+</form>
+
+
+</body>
+</html>

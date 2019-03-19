@@ -1,0 +1,15 @@
+﻿빌드 시작: 2018-09-12 오후 9:14:07
+     1>2 노드의 "C:\Users\Kim Junsoo\Desktop\C++\0912 homework\3\3\3.vcxproj" 프로젝트(Build 대상)입니다.
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt "소스.cpp"
+         소스.cpp
+     1>c:\users\kim junsoo\desktop\c++\0912 homework\3\3\소스.cpp(21): error C2535: 'Oper::Oper(void)' : 멤버 함수를 이미 정의했거나 선언했습니다.
+                 c:\users\kim junsoo\desktop\c++\0912 homework\3\3\소스.cpp(16) : 'Oper::Oper' 선언을 참조하십시오.
+     1>c:\users\kim junsoo\desktop\c++\0912 homework\3\3\소스.cpp(26): warning C4244: '=' : 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>c:\users\kim junsoo\desktop\c++\0912 homework\3\3\소스.cpp(28): warning C4244: '=' : 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>c:\users\kim junsoo\desktop\c++\0912 homework\3\3\소스.cpp(30): warning C4244: '=' : 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>"C:\Users\Kim Junsoo\Desktop\C++\0912 homework\3\3\3.vcxproj" 프로젝트를 빌드했습니다(Build 대상). - 실패
+
+빌드하지 못했습니다.
+
+경과 시간: 00:00:00.37
