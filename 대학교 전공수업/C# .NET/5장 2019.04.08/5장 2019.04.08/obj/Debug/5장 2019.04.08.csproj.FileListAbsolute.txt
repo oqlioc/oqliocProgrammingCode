@@ -1,0 +1,6 @@
+C:\Users\user\Desktop\20131902 김홍일\5장 2019.04.08\5장 2019.04.08\bin\Debug\5장 2019.04.08.exe.config
+C:\Users\user\Desktop\20131902 김홍일\5장 2019.04.08\5장 2019.04.08\bin\Debug\5장 2019.04.08.exe
+C:\Users\user\Desktop\20131902 김홍일\5장 2019.04.08\5장 2019.04.08\bin\Debug\5장 2019.04.08.pdb
+C:\Users\user\Desktop\20131902 김홍일\5장 2019.04.08\5장 2019.04.08\obj\Debug\5장 2019.04.08.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\20131902 김홍일\5장 2019.04.08\5장 2019.04.08\obj\Debug\5장 2019.04.08.exe
+C:\Users\user\Desktop\20131902 김홍일\5장 2019.04.08\5장 2019.04.08\obj\Debug\5장 2019.04.08.pdb
