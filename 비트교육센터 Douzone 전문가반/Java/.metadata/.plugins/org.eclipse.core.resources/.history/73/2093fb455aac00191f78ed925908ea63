@@ -1,0 +1,79 @@
+package test;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Random;
+import java.util.Scanner;
+
+public class test {
+
+	public static void main(String[] args) {
+
+		Random generator = new Random();
+
+		LinkedList<Integer> list = new LinkedList<>();
+
+		int num = 0;
+		int count = 0;
+		while (true) {
+			Scanner scanner = new Scanner(System.in);
+			System.out.println("그만 할려면 99 아니면 아무거나");
+			int sca = scanner.nextInt();
+
+			if (sca != 99) {
+				System.out.println(list.size() + " ------------------");
+
+				for (int i = list.size(); i < 10; i++) {
+					list.add(num);
+					num++;
+					System.out.printf("%3d ", list.);
+				}System.out.println();
+				
+				if (count == 0) {
+					for (int j = 0; j < 10; j++) {
+						System.out.printf("%3d ", 0);
+					}
+				}System.out.println();
+
+				System.out.println(list.toString() + " 1 ");
+
+				for (int j = 0; j < 10; j++) {
+					if (generator.nextInt(2) == 0) {
+						list.remove();
+					}
+				}
+				Iterator<Integer> iter = list.iterator();
+
+				System.out.println(list.toString() + " 2 ");
+//				for (int j = 0; j < 10; j++) {
+//					if (generator.nextInt(2) == 0) {
+//						list.remove(j);
+//					}
+//					if (iter.next() % 2 != 0) {
+//		                iter.remove();
+//		            }
+//				}
+
+			} else {
+				break;
+			}
+			count++;
+		}
+	}
+}
+
+//0 ~ 10 출력
+//랜덤하게 사라진다
+//다시 출력, 빈칸에 다시 이어서 출력
+//    1   ,          0
+
+//랜덤하게 사라진다
+//다시 출력, 빈칸에 다시 이어서 출력
+//    2,   1,   0
+
+//         System.out.printf("호랑이");
+//         System.out.printf("코끼리");
+//         System.out.printf("\n독수리\n");
+//         System.out.printf("고%d양%d이\n", 10, 20);
+//         System.out.printf("고%03d양%04d이\n", 10, 20);
+//         System.out.printf("고%3d양%05d이\n", 10, 20);

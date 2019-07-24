@@ -1,0 +1,14 @@
+package test1;
+
+public class testMain {
+
+	public static void main(String[] args) {
+		System.out.println("hello");
+		int a = 10;
+		int b;
+		
+		if (a > 0) {
+			
+		}
+	}
+}

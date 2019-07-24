@@ -1,0 +1,100 @@
+{
+    // IntelliSense를 사용하여 가능한 특성에 대해 알아보세요.
+    // 기존 특성에 대한 설명을 보려면 가리킵니다.
+    // 자세한 내용을 보려면 https://go.microsoft.com/fwlink/?linkid=830387을(를) 방문하세요.
+    //"console": "integratedTerminal"
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - DoubleLinkedListINT",
+            "request": "launch",
+            "mainClass": "test.DoubleLinkedListINT",
+            "projectName": "Zone Bit"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Collections_java",
+            "request": "launch",
+            "mainClass": "java20190723.Collections_java",
+            "projectName": "Zone Bit"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Collections_test",
+            "request": "launch",
+            "mainClass": "java20190723.Collections_test",
+            "projectName": "Zone Bit"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Link3",
+            "console": "integratedTerminal",
+            "request": "launch",
+            "mainClass": "java20190722.Link3",
+            "projectName": "Zone Bit"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Link",
+            "request": "launch",
+            "mainClass": "java20190719.Link",
+            "projectName": "Zone Bit"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - LinkList",
+            "request": "launch",
+            "mainClass": "java20190719.LinkList",
+            "projectName": "Zone Bit"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-java20190711<test1>",
+            "request": "launch",
+            "mainClass": "java20190711.java20190711",
+            "projectName": "test1"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-java20190712<test1>",
+            "request": "launch",
+            "mainClass": "java20190712.java20190712",
+            "projectName": "test1"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-java20190712c<test1>",
+            "request": "launch",
+            "mainClass": "java20190712.java20190712c",
+            "projectName": "test1"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-test<test1>",
+            "request": "launch",
+            "mainClass": "java20190716.test",
+            "projectName": "test1"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-test<test1>(1)",
+            "request": "launch",
+            "mainClass": "java20190717.test",
+            "projectName": "test1"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-test1<test1>",
+            "request": "launch",
+            "mainClass": "java20190718.test1",
+            "projectName": "test1"
+        }
+    ]
+}

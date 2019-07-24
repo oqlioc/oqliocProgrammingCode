@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Users\Hong\Desktop\douzone\Java\Strategy\strategy_pattern-master"/>
+		<item value="C:\Users\Hong\Desktop\douzone\Java\Lambda Expressions"/>
+		<item value="C:\Users\Hong\Desktop\douzone\2 team\BIT_ChatRoom-master"/>
+		<item value="C:\Users\Hong\Desktop\BIT_ChatRoom-master\ChatRoom"/>
+		<item value="C:\Users\Hong\Desktop\douzone\팀 활동\JavaScript 2조\client\BIT_ChatRoom-master"/>
+		<item value="C:\Users\Hong\Desktop\douzone\Java\Help"/>
+		<item value="C:\Users\Hong\Desktop\douzone\팀 활동\JavaScript 2조\패턴\observer-pattern-example-master"/>
+		<item value="C:\Users\Hong\Desktop\douzone\팀 활동\JavaScript 2조\패턴\strategy_pattern-master\strategy_pattern-master"/>
+		<item value="C:\Users\Hong\Desktop\백업 파일\김홍일\비트 프로젝트\미니\181015_2조_채팅\1조\Help"/>
+	</list>
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\Hong\Desktop\douzone\팀 활동\JavaScript 2조\Chatting_ver.Final"/>
+			<item value="C:\Users\Hong\Desktop\douzone\팀 활동\JavaScript 2조\BIT_ChatRoom-master"/>
+			<item value="C:\Users\Hong\Desktop\douzone\팀 활동\JavaScript 2조\BIT_ChatRoom-master\ChatRoom"/>
+			<item value="C:\Users\Hong\Desktop\douzone\2 team\BIT_ChatRoom-master\ChatRoom"/>
+			<item value="C:\Users\Hong\Desktop\BIT_ChatRoom-master\ChatRoom"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+</section>

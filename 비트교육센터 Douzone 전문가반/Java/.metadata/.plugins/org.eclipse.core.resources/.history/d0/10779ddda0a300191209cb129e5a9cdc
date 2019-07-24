@@ -1,0 +1,25 @@
+package test1;
+
+public class testMain {
+
+	public static void main(String[] args) {
+
+		int a = 10;
+		int b;
+		
+//		if (a > 0) {
+//			b = 3;
+//		} else {
+//			b = 4;
+//		}
+		b = (a > 0) ? 3 : 4;
+		
+//		if (a > 0){
+//			System.out.println("龋尔捞");
+//		}else {
+//			System.out.println("内尝府");
+//		}
+		System.out.println( a > 0 ? "龋尔捞" : "内尝府" );
+		
+	}
+}

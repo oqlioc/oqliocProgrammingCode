@@ -1,0 +1,19 @@
+package obs1;
+
+public class Arbeit implements Customer {
+	
+	Observable observable;
+	
+	public Arbeit() {};
+	
+	@Override
+	public void Updata() {
+		System.out.println("알바: 책 또 추가됨!?");
+	};
+	
+//	public void checkStat(){
+//		System.out.println("======= 상태체크 ========");
+//		observable.bookNum(this);
+//	}
+
+}

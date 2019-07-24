@@ -1,0 +1,13 @@
+package test1;
+
+import java.util.Scanner;
+
+public class test3 {
+	public static void main(String[] args) {
+		Scanner scanner = (new Scanner(System.in) count = scanner.nextInt());
+		
+		int count = scanner.nextInt();
+		
+		System.out.println(count);
+	}
+}

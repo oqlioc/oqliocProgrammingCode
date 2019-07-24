@@ -1,0 +1,44 @@
+package java20190723;
+
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.Random;
+
+class A {
+
+    int n;
+    String s;
+    
+    public A(int n, String s) {
+		super();
+		this.n = n;
+		this.s = s;
+	}
+	public void output() {
+        System.out.println("N : " + n + " S : " + s);
+    }
+}
+
+public class Collections_test {
+    public static void main(String[] args) {
+
+        LinkedList<A> list = new LinkedList<A>();
+        Random random = new Random();
+
+        for (int i = 0; i < 5; i++) {
+            list.add(new A(random.nextInt(100), "호랑이" + i));
+        }
+
+        for (A item : list) {
+            item.output();
+        }
+
+        System.out.println("-------------------------------");
+        
+        Collections.sort(list, (A o1, A o2) -> o1.n - o2.n); // 람다식
+
+        for (A item : list) {
+            item.output();
+        }
+    }
+}
