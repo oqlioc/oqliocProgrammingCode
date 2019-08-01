@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>board list</title>
+</head>
+
+<a href="board/form">글쓰기</a>
+
+<table border="1" style="width:600px">
+    <caption>게시판 리스트</caption>
+    <colgroup>
+        <col width='8%' />
+        <col width='*%' />
+        <col width='15%' />
+        <col width='15%' />
+    </colgroup>
+    <thead>
+        <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>등록자</th>
+            <th>등록일</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!--
+            컨트롤에서 지정된 데이터(rows)의 개수만큼 반복해서 [라인28]
+            HTML 테이블 태그의 TR을 생성한다.
+            하나의 TR이 데이터 한 행을 출력한다.
+            하나의 TD가 데이터 한 행의 한 열을 출력한다.
+        -->
+        <%
+             for(var i=0; i<rows.length; i++) {
+        %>
+        <tr>
+            <td><%=rows[i].BRDNO%></td>
+            <td><a href='/board2/read?brdno=<%=rows[i].BRDNO%>'><%=rows[i].BRDTITLE%></a></td>
+            <td><%=rows[i].BRDWRITER%></td>
+            <td><%=rows[i].BRDDATE%></td>
+        </tr>
+        <%
+             }
+        %>
+    </tbody>
+</table>
+</body>
+
+</html>
