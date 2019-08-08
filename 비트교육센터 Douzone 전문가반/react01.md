@@ -1,5 +1,9 @@
 # React 기본
 
+[React 기본](#react-기본)  
+[React 이론](#react-이론)  
+[React 명령어](#react-명령어)
+
 ## React 이론  
 >react 툴 : vsCode Webstorm Slickedit Atom
 
@@ -17,6 +21,8 @@ Ajax : 데이터만 요청해서 넣어주는것
 Virtual DOM : DOM과 비교해서 달라진것만 바꾼다.  
   
 >React는 View만 담당하는 라이브러리로 봐라.
+
+> 컨트롤 + f2 하면 동일한 단어 변경가능
 
 ## React 명령어
 >NodeJS : 설치  

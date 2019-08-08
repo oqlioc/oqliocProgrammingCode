@@ -1,0 +1,54 @@
+https://www.freenom.com/en/index.html?lang=en
+
+주소 선택하고
+DNS에 아마존IP입력
+이메일인증
+
+다시 로그인
+서비스 -> 마이도메인 -> 매니저도메인 ->
+매니저 프리넘 DNS -> 이름정하고 타겟에 아마존IP 입력 ->연결완료
+
+가상 호스팅
+gitbash 켜서 로그인
+ssh -i "키.pem" centos@아마존IP
+sudo su
+cd /etc/nginx/
+ls
+systemctl stop httpd  // 아파치 서버가 켜져있을때 서버를 끝다
+vim nginx.conf
+cd conf.d
+vi vhost.conf
+
+-----------------------------------------------------------
+server {
+    listen       80;
+    server_name  nodejs.zcvfcat.ga;  // 이것만 수정
+
+    location / {  // 이것만 수정
+        root /home/nodejs/public_html;
+        index index.html index.htm;
+    }
+}
+
+server {
+    listen       80;
+    server_name  spring.zcvfcat.ga;  // 이것만 수정
+
+    location / {  // 이것만 수정
+       root /home/spring/public_html;
+        index index.html index.htm;
+    }
+}
+-----------------------------------------------------------
+루트 복사하고
+systemctl restart nginx  // 서버 다시 시작
+
+루트 주소 붙여넣기하면 됨
+
+403에러 해결  // 각 폴더들에게 권한을 부여한다.
+cd home
+ls -al
+chmod 775
+cd nodejs/
+ls -al
+chmod -R 755 public_html/
