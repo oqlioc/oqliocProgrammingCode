@@ -1,10 +1,10 @@
 # React
-
+  
 [React](#react)  
 [ES6 동적 객체 키 [Dynamic Object Keys]](#es6-동적-객체-키-dynamic-object-keys)  
 [map 사용법](#map-사용법)  
 [map으로 'li'태그 반복하기](#map으로-li태그-반복하기)  
-[라이프사이클(Lifecycle)](#라이프사이클lifecycle)
+[라이프사이클(Lifecycle)](#라이프사이클lifecycle)  
 
 ## ES6 동적 객체 키 [Dynamic Object Keys]
 ```javascript

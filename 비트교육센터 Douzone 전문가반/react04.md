@@ -1,5 +1,14 @@
 # React
 
+  
+[React](#react)  
+[기본 배열의 concat, slice 활용](#기본-배열의-concat-slice-활용)  
+[ES6 전개연산자](#es6-전개연산자)  
+[ES6 전개연산자를 활용한 예제](#es6-전개연산자를-활용한-예제)  
+[비구조 할당](#비구조-할당)  
+[ES6 전개연산자 + 비구조할당을 활용한 예제](#es6-전개연산자--비구조할당을-활용한-예제)  
+[함수형 Component의 사용법](#함수형-component의-사용법)  
+
 ## 기본 배열의 concat, slice 활용
 ```javascript
 let ar = [10, 20, 30, 40, 50];
@@ -134,4 +143,31 @@ class App extends Component {
               .
               .
               이하생략
+```
+
+## 함수형 Component의 사용법
+```javascript
+// 함수형 Component (단축키 rsc)
+// 내가 만든 Component에 state를 사용안할거면 함수형 Component을 사용한다.
+// 라이프사이클이 없다.
+import React, { Component } from 'react';
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <Bpp a='호랑이' b='코끼리'/>
+      </div>
+    );
+  }
+}
+export default App;
+const Bpp = ({a, b}) => {  // 직접 바로 객체로 받을수있다 or props받아서 props.a로 사용할수있다
+  return (
+    <div>
+      안녕 난 Bpp야<br/>
+      <h1>{a}</h1>
+      <h1>{b}</h1>
+    </div>
+  );
+};
 ```
