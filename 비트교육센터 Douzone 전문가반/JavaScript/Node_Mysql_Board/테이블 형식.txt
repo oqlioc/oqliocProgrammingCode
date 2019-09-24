@@ -1,8 +1,0 @@
-CREATE TABLE TBL_BOARD (
-    BRDNO int(11) NOT NULL AUTO_INCREMENT,         -- 글 번호
-    BRDTITLE varchar(255),                                -- 제목
-    BRDWRITER varchar(20),                              -- 작성자
-    BRDMEMO   varchar(4000),                           -- 내용
-    BRDDATE     datetime,                                -- 작성일자
-    PRIMARY KEY (BRDNO)
-) ;

@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author kjw
- *
- */
-module DesignDecoratorPattern {
-}
